@@ -1,0 +1,4 @@
+FROM mongo
+
+COPY docker/mongo_init/sample_collection.bson sample_collection.bson
+COPY docker/mongo_init/sample_collection.metadata.json sample_collection.metadata.json
