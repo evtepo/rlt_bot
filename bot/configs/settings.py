@@ -14,7 +14,7 @@ class Settings(BaseSettings):
     mongo_port: int = Field(alias="MONGO_PORT", default=27017)
     mongo_db_name: str = Field(alias="DB_NAME", default="sampleDB")
 
-    bot_token: str = Field(alias="BOT_TOKEN", default="7257132856:AAEP_EPKxmonCpMgkVEjUlggMJkc1alMSDI")
+    bot_token: str = Field(alias="BOT_TOKEN", default="")
 
 
 settings = Settings()
