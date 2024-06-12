@@ -1,0 +1,24 @@
+version: '3.5'
+services:
+  rlt_bot:
+    container_name: rlt_bot
+    build: .
+    env_file:
+      - ./configs/.env.example
+    restart: always
+
+  mongodb:
+    container_name: mongo_container
+    build:
+      context: .
+      dockerfile: Dockerfile.mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db/
+    env_file:
+      - ./configs/.env.example
+
+volumes:
+  mongo_data:
